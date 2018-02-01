@@ -18,7 +18,7 @@
         <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">See the Modal</button>
 
         <div id="id01" class="w3-modal">
-            <div class="w3-modal-content">
+            <div class="w3-modal-content w3-animate-zoom">
                 <header class="w3-container w3-indigo">
                     <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <img src="https://static.pexels.com/photos/89775/dog-hovawart-black-pet-89775.jpeg" width="300">
@@ -31,11 +31,22 @@
                     <p>Description: Poppy is a young adult, black Labrador Retriever mix. She enjoys playing fetch and loves squeaky toys. Poppy is good with adults and children. She does well with other dogs, but has not been around cats. </p>
                 </div>
                 <footer class="w3-container w3-indigo">
-                    <p><button type="button">I want to adopt Poppy</button></p>
+                    <p><button class="w3-button" type="button">I want to adopt Poppy</button></p>
                 </footer>
             </div>
         </div>
     </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
